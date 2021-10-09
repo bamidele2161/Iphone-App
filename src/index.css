@@ -1,13 +1,324 @@
-body {
+body{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(1, 1, 18);
+  height: 100%;
+  width: 100%;
+  
+}
+.landing{
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  height: 70vh;
+  width: 100%;
+}
+.landing-form{
+  padding: 3rem 0 0 10rem;
+}
+.landing-headline{
+  font-size: 3rem;
+}
+.landing-image{
+  height: 100%;
+  width: 100%;
+}
+.laptop{
+  height: 33rem;
+  width: 100%;
+}
+.phone-display{
+  display: flex;
+  margin-bottom: 5rem;
+  width: 45rem;
+}
+.main-input{
+  width: 100%;
+  padding: 1.2rem;
+}
+.button{
+  margin-left: 1rem;
+  padding: 0 3rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: rgb(55, 135, 255);
+}
+.phone-search{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding-left: 3rem;
+}
+.card{
+  width: 10rem;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.3rem;
+  background-color: rgb(13, 28, 51);
+}
+.card-image{
+  height: 35%;
+  width: 100%;
+
+}
+.card-details{
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.promax-image{
+  width: 100%;
+  height: 100%;
+}
+
+.card-name {
+  font-size: 14px;
+}
+.card-memory{
+  font-size: 12px;
+}
+.card-available{
+  font-size: 12px;
+}
+.card-unit{
+  font-size: 10px;
+}
+.card-price{
+  font-size: 14px;
+}
+.card-grade{
+  background-color: rgb(55, 135, 255);
+  width: 2rem;
+  text-align: center;
+  color: white;
+  padding: 0.3rem 0;
+}
+.grade-div{
+  height: 3rem;
+}
+.buy-button{
+  background-color: rgb(55, 135, 255);
+  text-align: center;
+  color: white;
+  padding: 0.4rem 3rem;
+  cursor: pointer;
+  border: none;
+}
+.buy-btn{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.display-section{
+  margin-top: 5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr;
+}
+.sidebar{
+  background-color: rgb(13, 28, 51);
+  padding-left: 2rem;
+  height: 120vh;
+}
+.cat-list li{
+  list-style-type: none;
+}
+.min-max-input{
+  margin-top: 3rem;
+}
+.input-min{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+.input-max{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+.storage{
+  margin-top: 3rem;
+}
+ul li{
+  margin-top: 2rem;
+}
+.sto-list li{
+  list-style-type: none;
+}
+
+.range-input{
+
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+  .app-container{
+    border: solid red;
+    width: 100vw;
+  }
+  .card-container{
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+
+  }
+  .landing{
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+  .landing-form{
+    padding: 3rem 0 0 3rem;
+    width: 50%;
+  }
+  .landing-image{
+    height: 100%;
+    width: 50%;
+  }
+  .display-section{
+    font-size: 0.7rem;
+    grid-template-columns: 0.3fr 1.7fr;
+  }
+  .sidebar{
+    background-color: rgb(13, 28, 51);
+    padding-left: 1rem;
+    height: 120vh;
+  }
+  .laptop{
+    height: 22rem;
+    width: 100%;
+  }
+  .landing-headline{
+    font-size: 1.8rem;
+  }
+  .phone-display{
+    width: 25rem;
+    flex-direction: column;
+  }
+  .button{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 7rem;
+    margin-left: 0;
+  }
+
+  .main-input{
+    padding: 0.6rem;
+    width: 10rem;
+  }
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .app-container{
+  }
+  .card-container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .landing{
+    height: 60vh;
+  }
+  .laptop{
+    height: 90%;
+  }
+  .landing-form{
+    padding: 3rem 0 0 3rem;
+  }
+  .landing-headline{
+    font-size: 2.0rem;
+  }
+  .phone-display{
+    width: 25rem;
+  }
+  .main-input{
+    padding: 0.8rem;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .app-container{
+  }
+  .card-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .landing-form{
+    padding: 3rem 0 0 5rem;
+  }
+  .landing-headline{
+    font-size: 2.5rem;
+  }
+  .phone-display{
+    width: 30rem;
+  }
+  .main-input{
+    padding: 1rem;
+  }
+  .landing-image{
+    width: 100%;
+  }
+  .laptop{
+    width: 100%;
+    height: 32rem;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .app-container{
+  }
+  .landing{
+  }
+  .landing-form{
+    padding: 3rem 0 0 7rem;
+  }
+  .landing-headline{
+    font-size: 2.7rem;
+  }
+  .main-input{
+    padding: 1rem;
+  }
+  .landing-image{
+    width: 100%;
+  }
+  .laptop{
+    width: 120%;
+    height: 32rem;
+  }
+  .phone-display{
+    width: 40rem;
+  }
+  .card-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .app-container{
+    width: 100%;
+  }
+  .landing-image{
+    width: 100%;
+  }
 }
